@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:id="@+id/container"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="396dp"
+                                                   android:background="@drawable/lp_corner_white_bg"
+                                                   android:clickable="true"
+                                                   android:focusable="true">
+
+    <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:scaleType="fitXY"
+            android:src="@drawable/lp_bg_room_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_launcher_background"
+            app:tint="@color/GBK06A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="56dp"
+            android:background="@null"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="设置名称"
+            android:textSize="13sp"
+            android:textColor="@color/GBK06A"
+            android:transitionName="liveplusShareTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+    <RelativeLayout
+            android:id="@+id/layout_et_room"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/lp_shape_grey_edit_normal"
+            app:layout_constraintBottom_toBottomOf="@id/et_room"
+            app:layout_constraintTop_toTopOf="@id/et_room" />
+
+    <EditText
+            android:id="@+id/et_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:maxEms="30"
+            android:maxLength="30"
+            android:lineSpacingExtra="8sp"
+            android:paddingStart="13dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="36dp"
+            android:paddingBottom="13dp"
+            android:textColor="@color/GBK02A"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip"
+            tools:text="陈佩奇的Live+ 陈佩奇的Live陈佩奇的LLive陈佩奇的Live陈佩奇的Live陈佩奇的Live陈佩奇的Live陈佩奇的Live" />
+
+
+    <ImageButton
+            android:id="@+id/btn_clear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_launcher_background"
+            app:tint="@color/GBK03A"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/layout_et_room"
+            app:layout_constraintEnd_toEndOf="@id/layout_et_room"
+            app:layout_constraintTop_toTopOf="@id/layout_et_room"
+            tools:visibility="visible" />
+
+    <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:buttonTint="@color/GBL01A"
+            android:gravity="center_vertical"
+            android:text="同意协议"
+            android:textColor="@color/GBK03A"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layout_confirm" />
+
+    <TextView
+            android:id="@+id/tv_what"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:gravity="center_vertical"
+            android:text="《协议名称》"
+            android:textColor="@color/GBL01A"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/checkbox"
+            app:layout_constraintStart_toEndOf="@id/checkbox" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/layout_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="22dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    >
+
+        <TextView
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/GBL01A" />
+
+        <TextView
+                android:id="@+id/btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="点击创建"
+                android:textColor="@color/GBK99B"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_confirm"
+                app:layout_constraintEnd_toEndOf="@id/btn_confirm"
+                app:layout_constraintStart_toStartOf="@id/btn_confirm"
+                app:layout_constraintTop_toTopOf="@id/btn_confirm" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
